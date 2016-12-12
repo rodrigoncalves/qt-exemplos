@@ -5,7 +5,8 @@ CONFIG += c++11
 
 SOURCES += main.cpp \
     simplemenu.cpp \
-    anothermenu.cpp
+    anothermenu.cpp \
+    checkable.cpp
 
 RESOURCES += qml.qrc
 
@@ -19,4 +20,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     simplemenu.h \
-    anothermenu.h
+    anothermenu.h \
+    checkable.h

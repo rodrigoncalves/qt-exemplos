@@ -1,12 +1,12 @@
-#include "anothermenu.h"
+#include "checkable.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    AnotherMenu window;
+    Checkable window;
     window.resize(350, 200);
-    window.setWindowTitle("Another menu");
+    window.setWindowTitle("Checkable menu");
     window.show();
 
     return app.exec();
