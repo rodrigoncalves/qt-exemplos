@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += qml quick widgets
+QT += widgets
 CONFIG += c++11
 
 SOURCES += main.cpp \
@@ -8,10 +8,7 @@ SOURCES += main.cpp \
     anothermenu.cpp \
     checkable.cpp
 
-RESOURCES += qml.qrc
-
-# Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
+RESOURCES +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
