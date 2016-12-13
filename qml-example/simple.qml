@@ -16,8 +16,8 @@ ApplicationWindow  {
     }
 
     Button {
-        x: 120
-        y: 20
+        x: 198
+        y: 15
         text: "Quit"
         onClicked: Qt.quit()
     }
@@ -31,10 +31,24 @@ ApplicationWindow  {
     }
 
     CheckBox {
-        x: 15
+        x: 47
         y: 15
         text: "Show title"
         checked: false
         onClicked: rootwin.onChecked(checked)
+    }
+
+    Row {
+        x: 47
+        y: 157
+        Slider {
+            id: slider
+            minimumValue: 0
+            maximumValue: 100
+        }
+
+        Label {
+            text: Math.floor(slider.value)
+        }
     }
 }
