@@ -15,15 +15,15 @@ Window {
             id: clear
             text: "Clear"
             onClicked: {
-
+                canvas.clear()
             }
 
         }
         Button {
             id: save
-            text: "Save "
+            text: "Save"
             onClicked: {
-
+                mouse.save()
             }
         }
     }
@@ -35,6 +35,13 @@ Window {
         height: parent.height
         property int lastX: 0
         property int lastY: 0
+
+        function clear() {
+            var ctx = getContext("2d")
+            ctx.reset()
+            canvas.requestPaint()
+            mouse.clear()
+        }
 
         onPaint: {
             // Do cool stuff
@@ -48,6 +55,10 @@ Window {
             lastY = area.mouseY
             ctx.lineTo(lastX, lastY)
             ctx.stroke()
+
+            mouse.test()
+            mouse.add(lastX, lastY)
+            mouse.add(Qt.point(lastX, lastY))
         }
 
         MouseArea {
