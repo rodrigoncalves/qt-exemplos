@@ -2,21 +2,17 @@
 
 import QtQuick 2.5
 
-Square {
+DarkSquare {
     id: root
-    width: 240
-    height: 240
-    color: "#3c3c3c" // negro
-    border.color: Qt.darker(color)
-    border.width: 1
+    width: 240; height: 240
 
     // coloca os elementos dipostos em uma coluna
     Column {
         id: column
         anchors.centerIn: parent
         spacing: 8 // espaçamento entre os elementos
-        Square { color: "#ea7025" } // vermelho
-        Square { color: "#67c111"; width: 96 } // verde
-        Square { color: "#ea7025" } // vermelho
+        RedSquare {}
+        GreenSquare { width: 96 }
+        RedSquare {}
     }
 }
