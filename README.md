@@ -4,6 +4,8 @@
     - tutorial1
     - tutorial2
     - tutorial3
+    - quick-starter
+    	- components
 
 - Aplicações
     - calculator
