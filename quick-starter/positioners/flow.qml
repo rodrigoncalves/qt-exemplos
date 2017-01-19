@@ -9,12 +9,12 @@ BrightSquare {
     // Flow coloca os elementos em linhas e/ou colunas
     // de modo que caiba na tela
     Flow {
-    	anchors.fill: parent
-    	anchors.margins: 20
-    	spacing: 20
+        anchors.fill: parent
+        anchors.margins: 20
+        spacing: 20
 
-    	RedSquare {}
-    	BlueSquare {}
-    	GreenSquare {}
+        RedSquare {}
+        BlueSquare {}
+        GreenSquare {}
     }
 }
