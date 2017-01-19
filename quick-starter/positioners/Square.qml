@@ -1,4 +1,4 @@
-// RedSquare.qml
+// Square.qml
 
 import QtQuick 2.5
 
