@@ -7,6 +7,7 @@
     - quick-starter
     	- components
         - transformation
+        - positioners
 
 - Aplicações
     - calculator
