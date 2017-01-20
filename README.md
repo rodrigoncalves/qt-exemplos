@@ -5,9 +5,10 @@
     - tutorial2
     - tutorial3
     - quick-starter
-    	- components
+        - components
         - transformation
         - positioners
+    - fluid-elements
 
 - Aplicações
     - calculator
