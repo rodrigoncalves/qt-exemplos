@@ -9,6 +9,7 @@
         - transformation
         - positioners
     - fluid-elements
+    - model-view-delegate
 
 - Aplicações
     - calculator
