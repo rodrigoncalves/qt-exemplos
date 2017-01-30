@@ -1,6 +1,6 @@
 # Networking
 
 - http-requests
-- local-files
+- localfiles
 - rest-api
 - oath

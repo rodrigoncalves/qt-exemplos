@@ -1,4 +1,7 @@
-// httprequest.qml
+/**
+ * Este arquivo carrega um JSON via requisição web
+ * e apresenta em uma lista
+ */
 import QtQuick 2.5
 
 Rectangle {
@@ -9,7 +12,7 @@ Rectangle {
         id: view
         anchors.fill: parent
 
-        // Mostra imagem e texto recebido pelo requisição JSON
+        // "Thumbnail" mostra imagem e texto recebido pelo requisição JSON
         delegate: Thumbnail {
             width: view.width
             text: modelData.title
@@ -17,6 +20,7 @@ Rectangle {
         }
     }
 
+    // função JavaScript
     function request() {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
