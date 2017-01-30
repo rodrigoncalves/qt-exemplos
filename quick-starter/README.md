@@ -10,4 +10,4 @@
 	- text edit
 	- keys element
 
-Fonte: http://qmlbook.github.io/en/ch04/index.html
+Fonte: http://qmlbook.github.io/en/ch04

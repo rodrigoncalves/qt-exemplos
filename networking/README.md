@@ -2,5 +2,6 @@
 
 - http-requests
 - localfiles
-- rest-api
-- oath
+- rest
+
+Fonte: http://qmlbook.github.io/en/ch11
