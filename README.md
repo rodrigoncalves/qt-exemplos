@@ -10,6 +10,7 @@
         - positioners
     - fluid-elements
     - networking
+    - storage
 
 - Aplicações
     - calculator
