@@ -12,6 +12,7 @@
     - model-view-delegate
     - networking
     - storage
+    - dynamic-qml
 
 - Aplicações
     - calculator
