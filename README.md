@@ -11,6 +11,7 @@
     - fluid-elements
     - model-view-delegate
     - networking
+    - storage
 
 - Aplicações
     - calculator
