@@ -10,6 +10,7 @@
     - networking
     - storage
     - dynamic-qml
+    - qt-cpp
 
 - Aplicações
     - calculator
