@@ -5,9 +5,6 @@
     - tutorial2
     - tutorial3
     - quick-starter
-        - components
-        - transformation
-        - positioners
     - fluid-elements
     - model-view-delegate
     - networking
