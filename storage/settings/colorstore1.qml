@@ -5,8 +5,7 @@ import Qt.labs.settings 1.0
 /**
  * Um pequeno exemplo que aplica valor de uma cor ao retângulo.
  * Quando o usuário clica na janela uma nova cor randômica é gerada.
- * Ao reabrir a aplicação, deve-se aparecer a última cor, as mesmas
- * dimensões de tamanho e comprimento da janela e a mesma posição na tela
+ * Ao reabrir a aplicação, deve-se aparecer a última cor.
  */
 Rectangle {
     id: root
