@@ -5,6 +5,10 @@
 #include <QTextStream>
 #include <QDebug>
 
+/**
+ * Para compilar o projeto execute o comando:
+ * 1. qmake && make
+ */
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
@@ -14,6 +18,8 @@ int main(int argc, char *argv[])
 
     // prepara um arquivo no diretório de usuário (home)
     QFile file(QDir::home().absoluteFilePath("out.txt"));
+
+    qDebug() << "teste";
 
     // tenta abrir o arquivo em modo de escrita
     if (!file.open(QIODevice::WriteOnly)) {
@@ -27,7 +33,7 @@ int main(int argc, char *argv[])
     stream << message;
 
     // do not start the eventloop as this would wait for external IO
-    // app.exec();
+    app.exec();
 
     // não é necessário fechar o arquivo, isso é feito
     // automaticamente ao fim do escopo
