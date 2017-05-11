@@ -7,7 +7,9 @@
 
 /**
  * Para compilar o projeto execute o comando:
- * 1. qmake && make
+ * $ qmake
+ * $ make (Linux)
+ * $ jom (Windows)
  */
 int main(int argc, char *argv[])
 {
