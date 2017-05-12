@@ -5,7 +5,9 @@ QT += qml quick
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    dataentrymodel.cpp
+    dataentrymodel.cpp \
+    roleentrymodel.cpp \
+    dynamicentrymodel.cpp
 
 RESOURCES += qml.qrc
 
@@ -16,4 +18,6 @@ QML_IMPORT_PATH =
 # include(deployment.pri)
 
 HEADERS += \
-    dataentrymodel.h
+    dataentrymodel.h \
+    roleentrymodel.h \
+    dynamicentrymodel.h

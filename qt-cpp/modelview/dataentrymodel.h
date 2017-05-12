@@ -4,7 +4,7 @@
 #include <QtCore>
 #include <QtGui>
 
-class DataEntryModel
+class DataEntryModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
@@ -19,4 +19,4 @@ private:
     QList<QString> m_data;
 };
 
-#endif
+#endif // DATAENTRYMODEL_H
