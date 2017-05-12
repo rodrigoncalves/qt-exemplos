@@ -5,10 +5,15 @@ import org.example 1.0
 ListView {
     id: view
     anchors.fill: parent
-    model: DataEntryModel {}
+    model: RoleEntryModel {}
+    focus: true
+
     delegate: ListDelegate {
-        // use the defined model role "diplay"
-        text: model.display
+    	text: 'hsv(' +
+            Number(model.hue).toFixed(2) + ',' +
+            Number(model.saturation).toFixed() + ',' +
+            Number(model.brightness).toFixed() + ')'
+        color: model.name
     }
 
     highlight: ListHighlight {}
