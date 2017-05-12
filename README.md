@@ -17,6 +17,7 @@
     - menusandtoolbars (widget)
     - mouse-monitors
     - notification
+    - gallery
 
 - Exemplos diversos
     - helloworld
