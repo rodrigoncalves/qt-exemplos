@@ -15,25 +15,90 @@ ApplicationWindow {
     header: ToolBar {
         Material.foreground: "white"
 
-        ToolButton {
-            contentItem: Image {
-                fillMode: Image.pad
-                horizontalAlignment: Image.AlignHCenter
-                verticalAlignment: Image.AlignVCenter
-                source: "qrc:/images/menu.png"
+        RowLayout {
+            spacing: 20
+            anchors.fill: parent
+
+            ToolButton {
+                contentItem: Image {
+                    fillMode: Image.Pad
+                    horizontalAlignment: Image.AlignHCenter
+                    verticalAlignment: Image.AlignVCenter
+                    source: "qrc:/images/drawer.png"
+                }
+                onClicked: drawer.open()
             }
 
-            Menu {
-                id: optionsMenu
-                x: parent.width - width
-                transformOrigin: Menu.TopRight
+            Label {
+                id: titleLabel
+                text: "Galeria"
+                font.pixelSize: 20
+                elide: Label.ElideRight
+                horizontalAlignment: Qt.AlignHCenter
+                verticalAlignment: Qt.AlignVCenter
+                Layout.fillWidth: true
+            }
 
-                MenuItem {
-                    text: "Sobre"
-//                    onTriggered: settingsPopup.open()
+            ToolButton {
+                contentItem: Image {
+                    fillMode: Image.Pad
+                    horizontalAlignment: Image.AlignHCenter
+                    verticalAlignment: Image.AlignVCenter
+                    source: "qrc:/images/menu.png"
+                }
+                onClicked: optionsMenu.open()
+
+                Menu {
+                    id: optionsMenu
+                    x: parent.width - width
+                    transformOrigin: Menu.TopRight
+
+                    MenuItem {
+                        text: "Sobre"
+                        onTriggered: aboutDialog.open()
+                    }
                 }
             }
         }
     }
 
+    Drawer {
+        id: drawer
+    }
+
+    Popup {
+        id: aboutDialog
+        modal: true // escurece o fundo
+        focus: true
+        x: (window.width - width) / 2
+        y: window.height / 6
+        width: Math.min(window.width, window.height) / 3 * 2
+        contentHeight: aboutColumn.height
+
+        Column {
+            id: aboutColumn
+            spacing: 20
+
+            Label {
+                text: "Sobre"
+                font.bold: true
+            }
+
+            Label {
+                width: aboutDialog.availableWidth
+                text: "The Qt Quick Controls 2 module delivers the next generation user interface controls based on Qt Quick."
+                wrapMode: Label.Wrap
+                font.pixelSize: 12
+            }
+
+            Label {
+                width: aboutDialog.availableWidth
+                text: "In comparison to the desktop-oriented Qt Quick Controls 1, Qt Quick Controls 2 "
+                    + "are an order of magnitude simpler, lighter and faster, and are primarily targeted "
+                    + "towards embedded and mobile platforms."
+                wrapMode: Label.Wrap
+                font.pixelSize: 12
+            }
+        }
+    }
 }
