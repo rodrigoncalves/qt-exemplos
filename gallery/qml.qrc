@@ -3,5 +3,7 @@
         <file>main.qml</file>
         <file>images/menu.png</file>
         <file>images/drawer.png</file>
+        <file>pages/GroupBoxPage.qml</file>
+        <file>pages/StackViewPage.qml</file>
     </qresource>
 </RCC>

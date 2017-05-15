@@ -80,7 +80,7 @@ ApplicationWindow {
                     if (listView.currentIndex != index) {
                         listView.currentIndex = index
                         titleLabel.text = model.title
-//                        stackView.replace(model.source)
+                        stackView.replace(model.source)
                     }
                     drawer.close()
                 }
@@ -93,6 +93,11 @@ ApplicationWindow {
 
             ScrollIndicator.vertical: ScrollIndicator { }
         }
+    }
+
+    StackView {
+        id: stackView
+        anchors.fill: parent
     }
 
     Popup {
