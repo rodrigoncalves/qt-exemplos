@@ -64,6 +64,35 @@ ApplicationWindow {
 
     Drawer {
         id: drawer
+        width: Math.min(window.width, window.height)* 2 / 3
+        height: window.height
+
+        ListView {
+            id: listView
+            currentIndex: -1
+            anchors.fill: parent
+
+            delegate: ItemDelegate {
+                width: parent.width
+                text: model.title
+                highlighted: ListView.isCurrentItem
+                onClicked: {
+                    if (listView.currentIndex != index) {
+                        listView.currentIndex = index
+                        titleLabel.text = model.title
+//                        stackView.replace(model.source)
+                    }
+                    drawer.close()
+                }
+            }
+
+            model: ListModel {
+                ListElement { title: "GroupBox"; source: "qrc:/pages/GroupBoxPage.qml" }
+                ListElement { title: "StackView"; source: "qrc:/pages/StackViewPage.qml" }
+            }
+
+            ScrollIndicator.vertical: ScrollIndicator { }
+        }
     }
 
     Popup {
@@ -72,7 +101,7 @@ ApplicationWindow {
         focus: true
         x: (window.width - width) / 2
         y: window.height / 6
-        width: Math.min(window.width, window.height) / 3 * 2
+        width: Math.min(window.width, window.height) * 2 / 3
         contentHeight: aboutColumn.height
 
         Column {
